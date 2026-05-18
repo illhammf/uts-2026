@@ -168,8 +168,10 @@ dcu
 atau:
 ```sh
 docker compose up -d
+```
 Jalankan Migration & Seeder
-dci
+```sh
+dca project:init
 ```
 atau:
 ```sh
@@ -195,8 +197,9 @@ https://uts.test/admin
 | NIM |	20240801102 |
 | Program Studi | Teknik Informatika |
 | Fakultas | Ilmu Komputer |
+| Angkatan | 2024 |
 
-Universitas	Universitas Esa Unggul
+**Universitas	Universitas Esa Unggul** 
 
 ---
 
