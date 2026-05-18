@@ -21,3 +21,7 @@ Livewire::setScriptRoute(function ($handle) {
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/project/tukang-print-dadakan', function () {
+    return view('project.tukang-print-dadakan');
+});
