@@ -194,6 +194,7 @@ https://uts.test/admin
 | Nama | Ilham Firmansyah |
 | NIM |	20240801102 |
 | Program Studi | Teknik Informatika |
+| Fakultas | Ilmu Komputer |
 
 Universitas	Universitas Esa Unggul
 
