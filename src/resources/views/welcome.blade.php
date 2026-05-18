@@ -392,8 +392,15 @@
                         <!-- RIGHT FORM -->
                         <div class="contact-form-area">
 
-                            <form action="{{ url('/kontak') }}" method="post">
+                            <form action="{{ route('kontak.store') }}" method="post">
                                 @csrf
+                                
+                                @if (session('success')) <!-- Menampilkan pesan sukses setelah pengiriman berhasil -->
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+
 
                                 <div class="row">
 

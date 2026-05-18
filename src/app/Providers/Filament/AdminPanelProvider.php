@@ -54,6 +54,10 @@ class AdminPanelProvider extends PanelProvider
             ->navigationGroups([
                 NavigationGroup::make()
                     ->label('Administration'),
+                NavigationGroup::make()
+                    ->label('Manajemen Project'),
+                NavigationGroup::make()
+                    ->label('Pesan & Kontak'),
             ])
             ->userMenuItems([
                 'profile' => MenuItem::make()

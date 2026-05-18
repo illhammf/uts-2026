@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 use Illuminate\Support\Facades\Response;
+use App\Models\ContactMessage;
+use Illuminate\Http\Request;
 
 /* NOTE: Do Not Remove
 / Livewire asset handling if using sub folder in domain
@@ -22,6 +24,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/project/tukang-print-dadakan', function () {
+Route::get('/project/tukang-print-dadakan', function () { // Untuk menampilkan halaman proyek Tukang Print Dadakan
     return view('project.tukang-print-dadakan');
 });
+
+Route::post('/kontak', function (Request $request) {
+    $data = $request->validate([
+        'nama' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'subjek' => 'required|string|max:255',
+        'pesan' => 'required|string',
+    ]);
+
+    ContactMessage::create($data);
+
+    return redirect('/#contact')->with('success', 'Pesan berhasil dikirim!');
+})->name('kontak.store');
+
