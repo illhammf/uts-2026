@@ -1,4 +1,4 @@
-# UTS Pemrograman Web CR002 — <br>Portofolio & Progress Project Akhir
+<h1 align="center">UTS Pemrograman Web CR002 <br>Portofolio & Progress Project Akhir</h1>
 
 ![Laravel](https://img.shields.io/badge/Laravel-12-red?style=for-the-badge&logo=laravel)
 ![PHP](https://img.shields.io/badge/PHP-8-blue?style=for-the-badge&logo=php)
@@ -206,16 +206,14 @@ https://uts.test/admin
 # 📌 Catatan
 
 Project ini dibuat untuk memenuhi tugas:
-
-Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Web
-
-dan sekaligus menjadi progress awal project akhir berbasis Laravel.
+- Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Web
+- dan sekaligus menjadi progress awal project akhir berbasis Laravel.
 
 ---
 
 # ⭐ Author
 
-Made with ❤️ by Ilham Firmansyah
+Made with ❤️ by **Ilham Firmansyah**
 
 🔗 GitHub:
 https://github.com/illhammf
