@@ -53,10 +53,10 @@
                 <div class="col-md-2 col-sm-1"></div>
 
                 <div class="col-md-8 col-sm-10">
-                    <h1 class="tm-home-title"><strong>Ilham Firmansyah</strong></h1>
-                    <h2 class="tm-home-subtitle">Mahasiswa Teknik Informatika <br> & Web Developer</h2>
+                    <h1 class="tm-home-title"><strong> <br> Ilham Firmansyah</strong></h1>
+                    <h1 class="tm-home-subtitle">Developer</h1>
                     <p>
-                        Saya adalah mahasiswa semester 4 Teknik Informatika Universitas Esa Unggul yang sedang mengembangkan
+                        Saya adalah mahasiswa semester 4 Teknik Informatika Universitas Esa Unggul <br> yang sedang mengembangkan
                         kemampuan di bidang <strong>Web Development</strong>, khususnya menggunakan
                         <strong>Laravel</strong>, <strong>PHP</strong>, <strong>Blade</strong>,
                         <strong>Docker</strong>, dan <strong>MariaDB</strong>.
@@ -164,6 +164,11 @@
                                         <div class="portfolio-overlay">
                                             <h3 class="portfolio-item-title">Website Portofolio</h3>
                                             <p>Website personal untuk menampilkan profil, skill, project, dan kontak.</p>
+                                            <p>
+                                                <a href="{{ url('/project/website-portofolio') }}" class="btn btn-default">
+                                                    Detail Project
+                                                </a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -339,7 +344,6 @@
                 <div class="col-md-12 text-center">
                     <br>
                     <h2 class="title">Hubungi <strong>Saya</strong></h2>
-                    <hr>
                     <p class="contact-subtitle">
                         Punya pertanyaan atau ingin bekerja sama?
                         Silakan kirim pesan melalui form di bawah ini.
@@ -440,10 +444,11 @@
                 <div class="col-md-12 text-center">
                     <div class="copyright-area">
                         Copyright &copy; 2026 Ilham Firmansyah
-                        · design:
+                        - design:
                         <a href="https://github.com/illhammf" target="_blank">
                             illhammf
                         </a>
+                        <hr>
                     </div>
                 </div>
 

@@ -28,6 +28,10 @@ Route::get('/project/tukang-print-dadakan', function () { // Untuk menampilkan h
     return view('project.tukang-print-dadakan');
 });
 
+Route::get('/project/website-portofolio', function () {
+    return view('project.website-portofolio');
+});
+
 Route::post('/kontak', function (Request $request) {
     $data = $request->validate([
         'nama' => 'required|string|max:255',
