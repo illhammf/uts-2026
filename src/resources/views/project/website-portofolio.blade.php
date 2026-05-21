@@ -304,7 +304,7 @@
 
 <footer class="footer-project">
     <p>
-        Project oleh <strong>Ilham Firmansyah</strong> · Teknik Informatika · Universitas Esa Unggul
+        Project oleh: <br> <strong> 20240801102 Ilham Firmansyah</strong> · Teknik Informatika <br> Universitas Esa Unggul
     </p>
     <a href="{{ url('/') }}">Kembali ke halaman utama</a>
 </footer>

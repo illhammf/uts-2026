@@ -17,10 +17,15 @@ class ProjectResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-folder-open';
     protected static ?string $navigationGroup = 'Manajemen Project';
+    protected static ?int $navigationSort = 1;
     protected static ?string $navigationLabel = 'Project Akhir';
     protected static ?string $modelLabel = 'Project';
     protected static ?string $pluralModelLabel = 'Project Akhir';
-    protected static ?int $navigationSort = 1;
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {

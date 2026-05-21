@@ -15,11 +15,16 @@ class ProjectProgressResource extends Resource
     protected static ?string $model = ProjectProgress::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationGroup = 'Manajemen Project';
     protected static ?string $navigationLabel = 'Progress Project';
     protected static ?string $modelLabel = 'Progress';
     protected static ?string $pluralModelLabel = 'Progress Project';
-    protected static ?int $navigationSort = 2;
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {

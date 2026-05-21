@@ -15,11 +15,16 @@ class ContactMessageResource extends Resource
     protected static ?string $model = ContactMessage::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-envelope';
+    protected static ?int $navigationSort = 3;
     protected static ?string $navigationGroup = 'Pesan & Kontak';
     protected static ?string $navigationLabel = 'Pesan Masuk';
     protected static ?string $modelLabel = 'Pesan Kontak';
     protected static ?string $pluralModelLabel = 'Pesan Masuk';
-    protected static ?int $navigationSort = 1;
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
     public static function form(Form $form): Form
     {

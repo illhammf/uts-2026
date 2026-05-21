@@ -35,9 +35,14 @@ class AdminPanelProvider extends PanelProvider
             ->passwordReset()
             ->profile(\App\Filament\Pages\Auth\EditProfile::class, isSimple: false)
             ->defaultThemeMode(ThemeMode::Light)
-            ->font('Montserrat')
+            ->brandName('Ilham Admin Panel')
+            ->brandLogo(asset('front/images/logo-admin.png'))
+            ->brandLogoHeight('2.5rem')
+            ->favicon(asset('front/images/logo-admin.png'))
+            ->font('Poppins')
             ->colors([
-                'primary' => Color::Blue,
+                'primary' => Color::Orange,
+                'gray' => Color::Slate,
             ])
             ->maxContentWidth(MaxWidth::SevenExtraLarge)
             ->sidebarCollapsibleOnDesktop()
@@ -53,16 +58,16 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->navigationGroups([
                 NavigationGroup::make()
-                    ->label('Administration'),
-                NavigationGroup::make()
                     ->label('Manajemen Project'),
                 NavigationGroup::make()
                     ->label('Pesan & Kontak'),
+                NavigationGroup::make()
+                    ->label('Administration'),
             ])
             ->userMenuItems([
                 'profile' => MenuItem::make()
-                    ->label(fn () => auth()->user()->name)
-                    ->url(fn (): string => EditProfilePage::getUrl())
+                    ->label(fn() => auth()->user()->name)
+                    ->url(fn(): string => EditProfilePage::getUrl())
                     ->icon('heroicon-m-user-circle'),
                 // 'profile' => \Filament\Navigation\MenuItem::make()
                 //     ->label(fn () => auth()->user()->name)
@@ -84,7 +89,7 @@ class AdminPanelProvider extends PanelProvider
                         'lg' => 3,
                     ]),
                 \Hasnayeen\Themes\ThemesPlugin::make(),
-                \Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin::make()->color('#29b'),
+                \Njxqlus\FilamentProgressbar\FilamentProgressbarPlugin::make()->color('#eb5424'),
                 \DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin::make()
                     ->showEmptyPanelOnMobile(false)
                     ->formPanelPosition('right')
@@ -103,7 +108,7 @@ class AdminPanelProvider extends PanelProvider
                     ]),
                 \Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin::make()
                     ->slug('my-profile')
-                    ->setTitle('My Profile')
+                    ->setTitle('Profil Saya')
                     ->shouldRegisterNavigation(false)
                     ->shouldShowDeleteAccountForm(false)
                     ->shouldShowSanctumTokens(false)
