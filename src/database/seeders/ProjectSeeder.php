@@ -7,16 +7,12 @@ use Illuminate\Database\Seeder;
 
 class ProjectSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
         Project::create([
             'judul' => 'Tukang Print Dadakan',
-
             'slug' => 'tukang-print-dadakan',
-
             'deskripsi_singkat' =>
                 'Sistem booking layanan print mahasiswa berbasis Laravel.',
 

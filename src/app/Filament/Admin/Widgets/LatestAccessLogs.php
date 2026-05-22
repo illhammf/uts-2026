@@ -55,7 +55,7 @@ class LatestAccessLogs extends BaseWidget
                     ->badge()
                     ->colors(static::getLogNameColors())
                     ->label(__('filament-logger::filament-logger.resource.label.type'))
-                    ->formatStateUsing(fn ($state) => ucwords($state))
+                    ->formatStateUsing(fn($state) => ucwords($state))
                     ->sortable(),
                 Tables\Columns\TextColumn::make('event')
                     ->label(__('filament-logger::filament-logger.resource.label.event'))

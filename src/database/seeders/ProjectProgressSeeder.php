@@ -8,9 +8,7 @@ use Illuminate\Database\Seeder;
 
 class ProjectProgressSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
         $project = Project::first();

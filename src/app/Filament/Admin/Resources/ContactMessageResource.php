@@ -14,7 +14,7 @@ class ContactMessageResource extends Resource
 {
     protected static ?string $model = ContactMessage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-envelope';
+    protected static ?string $navigationIcon = 'heroicon-s-envelope';
     protected static ?int $navigationSort = 3;
     protected static ?string $navigationGroup = 'Pesan & Kontak';
     protected static ?string $navigationLabel = 'Pesan Masuk';

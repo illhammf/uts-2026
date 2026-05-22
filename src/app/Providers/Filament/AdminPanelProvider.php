@@ -54,6 +54,7 @@ class AdminPanelProvider extends PanelProvider
             ->discoverClusters(in: app_path('Filament/Admin/Clusters'), for: 'App\\Filament\\Admin\\Clusters')
             ->discoverWidgets(in: app_path('Filament/Admin/Widgets'), for: 'App\\Filament\\Admin\\Widgets')
             ->widgets([
+                \App\Filament\Admin\Widgets\StatistikDashboard::class,
                 \Awcodes\Overlook\Widgets\OverlookWidget::class,
             ])
             ->navigationGroups([
@@ -93,9 +94,9 @@ class AdminPanelProvider extends PanelProvider
                 \DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin::make()
                     ->showEmptyPanelOnMobile(false)
                     ->formPanelPosition('right')
-                    ->formPanelWidth('40%')
-                    ->emptyPanelBackgroundImageOpacity('70%')
-                    ->emptyPanelBackgroundImageUrl('https://picsum.photos/seed/picsum/1260/750.webp/?blur=1'),
+                    ->formPanelWidth('45%')
+                    ->emptyPanelBackgroundImageOpacity('99%')
+                    ->emptyPanelBackgroundImageUrl(asset('front/images/bglogin.jpg')),
                 \Awcodes\LightSwitch\LightSwitchPlugin::make()
                     ->position(\Awcodes\LightSwitch\Enums\Alignment::BottomCenter)
                     ->enabledOn([

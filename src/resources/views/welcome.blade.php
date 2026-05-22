@@ -396,7 +396,7 @@
                         <!-- RIGHT FORM -->
                         <div class="contact-form-area">
 
-                            <form action="{{ route('kontak.store') }}" method="post">
+                            <form action="{{ route('kontak.store') }}" method="POST"> <!-- Untuk menyimpan pesan kontak ke database -->
                                 @csrf
                                 
                                 @if (session('success')) <!-- Menampilkan pesan sukses setelah pengiriman berhasil -->

@@ -7,33 +7,24 @@ use Illuminate\Database\Seeder;
 
 class ContactMessageSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
         ContactMessage::create([
 
-            'nama' => 'Budi Mahasiswa',
-
-            'email' => 'budi@example.com',
-
+            'nama' => 'Annisa Zahra Fauziah',
+            'email' => 'annisazahra@gmail.com',
             'subjek' => 'Pertanyaan Layanan Print',
-
             'pesan' =>
                 'Halo kak, apakah layanan print warna bisa untuk ukuran A4 dan berapa estimasi pengerjaannya?',
-
             'status' => 'baru',
         ]);
 
         ContactMessage::create([
 
-            'nama' => 'Siti Nurhaliza',
-
-            'email' => 'siti@example.com',
-
+            'nama' => 'Misel Oktaviani Putri',
+            'email' => 'miseloktavianip@gmail.com',
             'subjek' => 'Belajar Bareng',
-
             'pesan' =>
                 'Saya ingin bertanya apakah tersedia layanan belajar Microsoft Word untuk membuat laporan.',
 
