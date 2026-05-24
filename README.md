@@ -1,12 +1,20 @@
-<h1 align="center">UTS Pemrograman Web CR002 <br>Portofolio & Progress Project Akhir</h1>
+<h1 align="center">
+  UTS Pemrograman Web CR002 <br>
+  Portofolio & Progress Project Akhir
+</h1>
 
-![Laravel](https://img.shields.io/badge/Laravel-12-red?style=for-the-badge&logo=laravel)
-![PHP](https://img.shields.io/badge/PHP-8-blue?style=for-the-badge&logo=php)
-![Docker](https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker)
-![MariaDB](https://img.shields.io/badge/MariaDB-Database-brown?style=for-the-badge&logo=mariadb)
-<br>![Filament](https://img.shields.io/badge/Filament-Admin%20Panel-orange?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/illhammf/crkosongdua-2026?style=for-the-badge)
-![Views](https://komarev.com/ghpvc/?username=illhammf&repo=crkosongdua-2026&color=blue&style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12-red?style=for-the-badge&logo=laravel" />
+  <img src="https://img.shields.io/badge/PHP-8-blue?style=for-the-badge&logo=php" />
+  <img src="https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker" />
+  <img src="https://img.shields.io/badge/MariaDB-Database-brown?style=for-the-badge&logo=mariadb" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Filament-Admin%20Panel-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/illhammf/crkosongdua-2026?style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=illhammf&repo=crkosongdua-2026&color=blue&style=for-the-badge" />
+</p>
 
 ---
 
