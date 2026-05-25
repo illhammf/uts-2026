@@ -1,3 +1,28 @@
+@php
+    $nama = $profile->nama ?? 'Ilham Firmansyah';
+    $profesi = $profile->judul_profesi ?? 'Developer';
+    $bio = $profile->bio_singkat ?? 'Mahasiswa Teknik Informatika yang fokus pada pengembangan website berbasis Laravel.';
+    $tentang = $profile->deskripsi_tentang ?? 'Saya memiliki ketertarikan dalam pengembangan aplikasi web.';
+
+    $whatsappNumber = preg_replace('/[^0-9]/', '', $profile->whatsapp ?? '');
+    $github = $profile->github ?? '#';
+    $instagram = $profile->instagram ?? '#';
+
+    $projectImages = [
+        'front/images/portfolio-img1.jpg',
+        'front/images/portfolio-img2.jpg',
+        'front/images/portfolio-img3.jpg',
+        'front/images/portfolio-img4.jpg',
+    ];
+
+    $techStacks = $projects->pluck('tech_stack')
+        ->filter()
+        ->flatMap(fn ($stack) => collect(explode(',', $stack))->map(fn ($item) => trim($item)))
+        ->unique()
+        ->take(4)
+        ->values();
+@endphp
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,11 +32,32 @@
     <meta name="keywords" content="Ilham Firmansyah, Laravel Developer, Web Developer, Portofolio, Tukang Print Dadakan">
     <meta name="description" content="Website portofolio Ilham Firmansyah sebagai mahasiswa Teknik Informatika dan developer web berbasis Laravel.">
 
-    <title>Portofolio Ilham Firmansyah</title>
+    <title>Portofolio {{ $nama }}</title>
 
     <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/templatemo-style.css') }}">
+
+    <style>
+    .empty-project {
+        padding: 60px 20px;
+        background: #f8f8f8;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .empty-project h3 {
+        color: #eb5424;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .empty-project p {
+        color: #777;
+        font-size: 16px;
+    }
+    </style>
+
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700" rel="stylesheet" type="text/css">
 </head>
 
@@ -27,7 +73,7 @@
                     <span class="icon icon-bar"></span>
                     <span class="icon icon-bar"></span>
                 </button>
-                <a href="#home" class="navbar-brand smoothScroll">Ilham Firmansyah</a>
+                <a href="#home" class="navbar-brand smoothScroll">{{ $nama }}</a>
             </div>
 
             <nav class="collapse navbar-collapse" id="rock-navigation">
@@ -53,14 +99,9 @@
                 <div class="col-md-2 col-sm-1"></div>
 
                 <div class="col-md-8 col-sm-10">
-                    <h1 class="tm-home-title"><strong> <br> Ilham Firmansyah</strong></h1>
-                    <h1 class="tm-home-subtitle">Developer</h1>
-                    <p>
-                        Saya adalah mahasiswa semester 4 Teknik Informatika Universitas Esa Unggul <br> yang sedang mengembangkan
-                        kemampuan di bidang <strong>Web Development</strong>, khususnya menggunakan
-                        <strong>Laravel</strong>, <strong>PHP</strong>, <strong>Blade</strong>,
-                        <strong>Docker</strong>, dan <strong>MariaDB</strong>.
-                    </p>
+                <h1 class="tm-home-title"><strong><br>{{ $nama }}</strong></h1>
+                <h1 class="tm-home-subtitle">{{ $profesi }}</h1>
+                <p>{{ $bio }}</p>
                     <a href="#portfolio" class="btn btn-default smoothScroll tm-view-more-btn">Lihat Project</a>
                 </div>
 
@@ -129,70 +170,48 @@
                 <div class="col-md-12 wow bounce">
 
                     <div class="title">
-                        <h2 class="tm-portfolio-title">Showcase <strong>Project</strong></h2>
+                        <h1 class="tm-portfolio-title">Showcase <strong>Project</strong></h1>
                     </div>
 
                     <div class="iso-section">
                         <ul class="filter-wrapper clearfix">
                             <li><a href="#" class="opc-main-bg selected" data-filter="*">Semua</a></li>
                             <li><a href="#" class="opc-main-bg" data-filter=".web">Web</a></li>
-                            <li><a href="#" class="opc-main-bg" data-filter=".laravel">Laravel</a></li>
-                            <li><a href="#" class="opc-main-bg" data-filter=".academic">Akademik</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".ekonomi">Ekonomi</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".kesehatan">Kesehatan</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".sosial">Sosial</a></li>
+                            <li><a href="#" class="opc-main-bg" data-filter=".pendidikan">Pendidikan</a></li>
                         </ul>
 
                         <div class="iso-box-section">
                             <div class="iso-box-wrapper col4-iso-box">
 
-                                <div class="iso-box web laravel academic col-md-3 col-sm-3 col-xs-12">
-                                    <div class="portfolio-thumb">
-                                        <img src="{{ asset('front/images/portfolio-img1.jpg') }}" class="fluid-img" alt="Tukang Print Dadakan">
-                                        <div class="portfolio-overlay">
-                                            <h3 class="portfolio-item-title">Tukang Print Dadakan</h3>
-                                            <p>Sistem booking layanan print mahasiswa berbasis Laravel.</p>
-                                            <p>
-                                                <a href="{{ url('/project/tukang-print-dadakan') }}" class="btn btn-default">
-                                                    Detail Project
-                                                </a>
-                                            </p>
+                                @forelse ($projects as $index => $project)
+                                    <div class="iso-box {{ $project->kategori ?? 'web' }} col-md-3 col-sm-3 col-xs-12">
+                                        <div class="portfolio-thumb">
+                                            <img
+                                                src="{{ $project->gambar ? asset('storage/' . $project->gambar) : asset($projectImages[$index % count($projectImages)]) }}"
+                                                class="fluid-img"
+                                                alt="{{ $project->judul }}">
+                                            <div class="portfolio-overlay">
+                                                <h3 class="portfolio-item-title">{{ $project->judul }}</h3>
+                                                <p>{{ $project->deskripsi_singkat }}</p>
+                                                <p>
+                                                    <a href="{{ route('project.detail', $project->slug) }}" class="btn btn-default">
+                                                        Detail Project
+                                                    </a>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="iso-box web laravel col-md-3 col-sm-3 col-xs-12">
-                                    <div class="portfolio-thumb">
-                                        <img src="{{ asset('front/images/portfolio-img2.jpg') }}" class="fluid-img" alt="Portfolio Website">
-                                        <div class="portfolio-overlay">
-                                            <h3 class="portfolio-item-title">Website Portofolio</h3>
-                                            <p>Website personal untuk menampilkan profil, skill, project, dan kontak.</p>
-                                            <p>
-                                                <a href="{{ url('/project/website-portofolio') }}" class="btn btn-default">
-                                                    Detail Project
-                                                </a>
-                                            </p>
-                                        </div>
+                                @empty
+                                    <div class="col-md-12 text-center empty-project">
+                                        <h3>Project Belum Tersedia</h3>
+                                        <p>
+                                            Belum ada project yang ditampilkan pada kategori ini.
+                                        </p>
                                     </div>
-                                </div>
-
-                                <div class="iso-box academic col-md-3 col-sm-3 col-xs-12">
-                                    <div class="portfolio-thumb">
-                                        <img src="{{ asset('front/images/portfolio-img3.jpg') }}" class="fluid-img" alt="Laporan Project">
-                                        <div class="portfolio-overlay">
-                                            <h3 class="portfolio-item-title">Laporan Project Akhir</h3>
-                                            <p>Dokumentasi awal project berisi BAB I sampai BAB V dan diagram sistem.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="iso-box web col-md-3 col-sm-3 col-xs-12">
-                                    <div class="portfolio-thumb">
-                                        <img src="{{ asset('front/images/portfolio-img4.jpg') }}" class="fluid-img" alt="Contact Form">
-                                        <div class="portfolio-overlay">
-                                            <h3 class="portfolio-item-title">Form Kontak Dinamis</h3>
-                                            <p>Form kontak yang dirancang agar dapat terhubung ke database.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                @endforelse
                             </div>
                         </div>
                     </div>
@@ -211,14 +230,53 @@
 
                 <div class="col-md-6 col-sm-6">
                     <h2 class="title">Profil <strong>Saya</strong></h2>
-                    <p><span class="tm-info-label">Nama</span> Ilham Firmansyah</p>
-                    <p><span class="tm-info-label">NIM</span> 20240801102</p>
-                    <p><span class="tm-info-label">Kampus</span> Universitas Esa Unggul</p>
-                    <p><span class="tm-info-label">Program Studi</span> Teknik Informatika</p>
-                    <p><span class="tm-info-label">Semester</span> 4</p>
-                    <p><span class="tm-info-label">Email</span> ilhamfrafli@gmail.com</p>
-                    <p><span class="tm-info-label">GitHub</span>
-                        <a href="https://github.com/illhammf" class="tm-red-text" target="_blank">github.com/illhammf</a>
+
+                    @if ($profile?->foto)
+                        <div style="margin-bottom: 25px;">
+                            <img
+                                src="{{ asset('storage/' . $profile->foto) }}"
+                                alt="{{ $nama }}"
+                                class="img-responsive"
+                                style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 5px solid #eb5424;">
+                        </div>
+                    @endif
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">Nama</span>
+                        {{ $profile->nama ?? '-' }}
+                    </p>
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">NIM</span>
+                        {{ $profile->nim ?? '-' }}
+                    </p>
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">Kampus</span>
+                        {{ $profile->kampus ?? '-' }}
+                    </p>
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">Program Studi</span>
+                        {{ $profile->prodi ?? '-' }}
+                    </p>
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">Semester</span>
+                        {{ $profile->semester ?? '-' }}
+                    </p>
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">Email</span>
+                        {{ $profile->email ?? '-' }}
+                    </p>
+
+                    <p>
+                        <span class="tm-info-label" style="min-width: 140px; display: inline-block;">GitHub</span>
+
+                        <a href="{{ $github }}" class="tm-red-text" target="_blank">
+                            {{ $github }}
+                        </a>
                     </p>
                 </div>
 
@@ -229,25 +287,25 @@
                         Pemrograman Web.
                     </p>
 
-                    <h4 class="tm-progress-label">Laravel & PHP <small class="progress-percent-small">85%</small></h4>
-                    <div class="progress tm-progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 85%;"></div>
-                    </div>
+                    @forelse ($skills as $skill)
 
-                    <h4 class="tm-progress-label">HTML, CSS, JavaScript <small class="progress-percent-small">80%</small></h4>
-                    <div class="progress tm-progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 80%;"></div>
-                    </div>
+                        <h4 class="tm-progress-label">
+                            {{ strtoupper($skill->nama_skill) }}
+                            <small class="progress-percent-small">
+                                {{ $skill->persentase }}%
+                            </small>
+                        </h4>
 
-                    <h4 class="tm-progress-label">Docker & WSL <small class="progress-percent-small">75%</small></h4>
-                    <div class="progress tm-progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 75%;"></div>
-                    </div>
+                        <div class="progress tm-progress">
+                            <div class="progress-bar progress-bar-danger"
+                                role="progressbar"
+                                style="width: {{ $skill->persentase }}%;">
+                            </div>
+                        </div>
 
-                    <h4 class="tm-progress-label">MariaDB & CRUD <small class="progress-percent-small">80%</small></h4>
-                    <div class="progress tm-progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" style="width: 80%;"></div>
-                    </div>
+                    @empty
+                        <p>Belum ada skill yang ditambahkan.</p>
+                    @endforelse
                 </div>
 
             </div>
@@ -263,17 +321,10 @@
                 <div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-7">
                     <div class="title">
                         <h2>Tentang <strong>Saya</strong></h2>
-                        <h1 class="tm-red-text">Web <strong>Developer</strong></h1>
+                        <h1 class="tm-red-text">{{ $profesi }}</h1>
                     </div>
                     <p>
-                        Saya memiliki ketertarikan dalam pengembangan aplikasi web, khususnya aplikasi
-                        yang dapat membantu menyelesaikan masalah nyata di sekitar saya.
-                    </p>
-                    <p>
-                        Salah satu project yang sedang saya kembangkan adalah
-                        <strong>Tukang Print Dadakan</strong>, yaitu sistem booking layanan print mahasiswa
-                        berbasis web yang menyediakan fitur pemesanan online, upload file, pembayaran digital,
-                        dashboard admin, dan integrasi WhatsApp.
+                        {{ $tentang }}
                     </p>
                 </div>
             </div>
@@ -289,7 +340,7 @@
 
                 <div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.3s">
                     <div class="media github">
-                        <a href="https://github.com/illhammf" target="_blank">
+                        <a href="{{ $github }}" target="_blank">
                             <div class="media-object pull-left">
                                 <i class="fa fa-github"></i>
                             </div>
@@ -303,7 +354,7 @@
 
                 <div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.6s">
                     <div class="media instagram">
-                        <a href="https://www.instagram.com/illhammf" target="_blank">
+                        <a href="{{ $instagram }}" target="_blank">
                             <div class="media-object pull-left">
                                 <i class="fa fa-instagram"></i>
                             </div>
@@ -317,7 +368,7 @@
 
                 <div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.9s">
                     <div class="media whatsapp">
-                        <a href="https://wa.me/62895336900466" target="_blank">
+                        <a href="https://wa.me/{{ $whatsappNumber}}" target="_blank">
                             <div class="media-object pull-left">
                                 <i class="fa fa-whatsapp"></i>
                             </div>
@@ -371,7 +422,7 @@
                                 <i class="fa fa-envelope"></i>
                                 <div>
                                     <strong>Email</strong>
-                                    <p>ilhamfrafli@gmail.com</p>
+                                    <p>{{ $profile->email ?? '-' }}</p>
                                 </div>
                             </div>
 
@@ -379,7 +430,7 @@
                                 <i class="fa fa-whatsapp"></i>
                                 <div>
                                     <strong>WhatsApp</strong>
-                                    <p>0895-3369-00466</p>
+                                    <p>{{ $profile->whatsapp ?? '-' }}</p>
                                 </div>
                             </div>
 
@@ -443,8 +494,8 @@
                 <!-- COPYRIGHT -->
                 <div class="col-md-12 text-center">
                     <div class="copyright-area">
-                        Copyright &copy; 2026 Ilham Firmansyah
-                        - design:
+                        Copyright &copy; 2026 {{ $nama }} - All rights reserved. <br>
+                        design by
                         <a href="https://github.com/illhammf" target="_blank">
                             illhammf
                         </a>
@@ -466,5 +517,29 @@
     <script src="{{ asset('front/js/imagesloaded.min.js') }}"></script>
     <script src="{{ asset('front/js/custom.js') }}"></script>
 
+    <script>
+    $(document).ready(function () {
+        $('.filter-wrapper a').on('click', function () {
+            const filterValue = $(this).attr('data-filter');
+
+            setTimeout(function () {
+                $('#empty-category').remove();
+
+                let totalItem = filterValue === '*'
+                    ? $('.iso-box').length
+                    : $('.iso-box' + filterValue).length;
+
+                if (totalItem === 0) {
+                    $('.iso-box-wrapper').append(`
+                        <div id="empty-category" class="col-md-12 text-center empty-project">
+                            <h3>Project Belum Tersedia</h3>
+                            <p>Belum ada project pada kategori ini.</p>
+                        </div>
+                    `);
+                }
+            }, 300);
+        });
+    });
+    </script>
 </body>
 </html>

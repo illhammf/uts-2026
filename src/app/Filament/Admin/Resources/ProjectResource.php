@@ -77,6 +77,30 @@ class ProjectResource extends Resource
                             ->maxValue(100)
                             ->suffix('%')
                             ->default(0),
+
+                        Forms\Components\FileUpload::make('gambar')
+                            ->label('Gambar Project')
+                            ->image()
+                            ->directory('projects/gambar')
+                            ->visibility('public')
+                            ->imageEditor()
+                            ->imageCropAspectRatio('640:425')
+                            ->imageResizeMode('cover')
+                            ->imageResizeTargetWidth('640')
+                            ->imageResizeTargetHeight('425')
+                            ->helperText('Upload gambar project. Gambar akan otomatis disesuaikan menjadi 640x425.'),
+
+                        Forms\Components\Select::make('kategori')
+                            ->label('Kategori Project')
+                            ->required()
+                            ->options([
+                                'web' => 'Web',
+                                'ekonomi' => 'Ekonomi',
+                                'kesehatan' => 'Kesehatan',
+                                'sosial' => 'Sosial',
+                                'pendidikan' => 'Pendidikan',
+                            ])
+                            ->default('web'),
                     ])
                     ->columns(2),
 
@@ -112,20 +136,23 @@ class ProjectResource extends Resource
                 Forms\Components\Section::make('File & Diagram')
                     ->description('Path file yang ditampilkan pada halaman detail project.')
                     ->schema([
-                        Forms\Components\TextInput::make('gambar_erd')
-                            ->label('Path Gambar ERD')
-                            ->placeholder('front/diagram/erd.png')
-                            ->maxLength(255),
+                        Forms\Components\FileUpload::make('gambar_erd')
+                            ->label('Upload Gambar ERD')
+                            ->image()
+                            ->directory('projects/diagram')
+                            ->visibility('public'),
 
-                        Forms\Components\TextInput::make('gambar_flowchart')
-                            ->label('Path Gambar Flowchart')
-                            ->placeholder('front/diagram/flowchart.png')
-                            ->maxLength(255),
+                        Forms\Components\FileUpload::make('gambar_flowchart')
+                            ->label('Upload Gambar Flowchart')
+                            ->image()
+                            ->directory('projects/diagram')
+                            ->visibility('public'),
 
-                        Forms\Components\TextInput::make('file_laporan')
-                            ->label('Path File Laporan PDF')
-                            ->placeholder('front/laporan/laporan-uts.pdf')
-                            ->maxLength(255),
+                        Forms\Components\FileUpload::make('file_laporan')
+                            ->label('Upload Laporan PDF')
+                            ->acceptedFileTypes(['application/pdf'])
+                            ->directory('projects/laporan')
+                            ->visibility('public'),
                     ])
                     ->columns(1),
             ]);

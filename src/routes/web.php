@@ -2,12 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
-use Illuminate\Support\Facades\Response;
 use App\Models\ContactMessage;
+use App\Models\Profile;
+use App\Models\Project;
+use App\Models\Skill;
 use Illuminate\Http\Request;
 
-/* NOTE: Do Not Remove
-/ Livewire asset handling if using sub folder in domain
+/*
+|--------------------------------------------------------------------------
+| Livewire asset handling if using sub folder in domain
+|--------------------------------------------------------------------------
+| NOTE: Do Not Remove
 */
 
 Livewire::setUpdateRoute(function ($handle) {
@@ -17,20 +22,44 @@ Livewire::setUpdateRoute(function ($handle) {
 Livewire::setScriptRoute(function ($handle) {
     return Route::get(config('app.asset_prefix') . '/livewire/livewire.js', $handle);
 });
+
 /*
-/ END
+|--------------------------------------------------------------------------
+| Frontend Routes
+|--------------------------------------------------------------------------
 */
+
 Route::get('/', function () {
-    return view('welcome');
+
+    $profile = \App\Models\Profile::first();
+    $projects = \App\Models\Project::latest()->get();
+    $skills = Skill::latest()->get();
+
+    return view('welcome', compact(
+        'profile',
+        'projects',
+        'skills'
+    ));
 });
 
-Route::get('/project/tukang-print-dadakan', function () { // Untuk menampilkan halaman proyek Tukang Print Dadakan
-    return view('project.tukang-print-dadakan');
-});
+/*
+|--------------------------------------------------------------------------
+| Dynamic Project Detail
+|--------------------------------------------------------------------------
+*/
 
-Route::get('/project/website-portofolio', function () {
-    return view('project.website-portofolio');
-});
+Route::get('/project/{slug}', function ($slug) {
+    $project = Project::with('progresses')
+        ->where('slug', $slug)
+        ->firstOrFail();
+
+    return view('project.detail', compact('project'));
+})->name('project.detail');
+/*
+|--------------------------------------------------------------------------
+| Contact Form
+|--------------------------------------------------------------------------
+*/
 
 Route::post('/kontak', function (Request $request) {
     $data = $request->validate([
@@ -42,6 +71,5 @@ Route::post('/kontak', function (Request $request) {
 
     ContactMessage::create($data);
 
-    return redirect('/#contact')->with('success', 'Pesan berhasil dikirim!');
+    return redirect()->to('/#contact')->with('success', 'Pesan berhasil dikirim!');
 })->name('kontak.store');
-

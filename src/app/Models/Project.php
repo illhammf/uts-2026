@@ -25,6 +25,10 @@ class Project extends Model
         'gambar_flowchart',
 
         'file_laporan',
+
+        'gambar',
+
+        'kategori',
     ];
 
     /*
