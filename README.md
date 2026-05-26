@@ -1,108 +1,135 @@
 <h1 align="center">
-  UTS Pemrograman Web CR002 <br>
+  💻 UTS Pemrograman Web CR002 <br>
   Portofolio & Progress Project Akhir
 </h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Laravel-12-red?style=for-the-badge&logo=laravel" />
-  <img src="https://img.shields.io/badge/PHP-8-blue?style=for-the-badge&logo=php" />
-  <img src="https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker" />
-  <img src="https://img.shields.io/badge/MariaDB-Database-brown?style=for-the-badge&logo=mariadb" />
+  Website portofolio personal dan showcase progress project akhir berbasis Laravel 12 + Filament Admin Panel.
+</p>
+
+---
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+<img src="https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+<img src="https://img.shields.io/badge/Filament-Admin%20Panel-F59E0B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Docker-Container-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/MariaDB-Database-003545?style=for-the-badge&logo=mariadb&logoColor=white" />
+
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Filament-Admin%20Panel-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/github/last-commit/illhammf/crkosongdua-2026?style=for-the-badge" />
-  <img src="https://komarev.com/ghpvc/?username=illhammf&repo=crkosongdua-2026&color=blue&style=for-the-badge" />
+
+<img src="https://img.shields.io/github/last-commit/illhammf/uts-2026?style=for-the-badge" />
+<img src="https://img.shields.io/github/repo-size/illhammf/uts-2026?style=for-the-badge" />
+<img src="https://komarev.com/ghpvc/?username=illhammf&repo=uts-2026&style=for-the-badge&color=blue" />
+
 </p>
 
 ---
 
-# 👨‍💻 Tentang Project
+# 📖 Tentang Project
 
-Repository ini merupakan project **UTS Mata Kuliah Pemrograman Web** yang berisi:
+Repository ini merupakan project **Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Web** yang dibuat menggunakan framework Laravel 12.
 
-✅ Website Portofolio Personal  
-✅ Showcase Project Akhir  
-✅ Dashboard Admin Filament  
-✅ CRUD Dinamis  
-✅ Integrasi Database  
-✅ Laporan Awal Project Akhir (.pdf)
+Aplikasi ini berfungsi sebagai:
 
-Project utama yang ditampilkan adalah:
+- 🌐 Website Portofolio Personal
+- 📊 Showcase Progress Project Akhir
+- ⚙️ Dashboard Admin Dinamis
+- 📂 Sistem CRUD Project
+- 📩 Contact Form Integration
+- 📈 Monitoring Progress Project
 
----
+Project utama yang ditampilkan dalam website ini adalah:
 
 # 🖨️ Tukang Print Dadakan
 
-Sistem booking layanan print mahasiswa berbasis web menggunakan Laravel.
+Sistem layanan print mahasiswa berbasis web yang dirancang untuk membantu proses:
 
-Aplikasi ini dirancang untuk membantu mahasiswa melakukan:
-- Print dokumen & gambar
+- Print dokumen
+- Print gambar
 - Fotokopi
-- Jilid
 - Laminating
-- Bantuan formatting tugas
-- Belajar bareng
+- Jilid tugas
+- Formatting dokumen
+- Konsultasi tugas
 
-secara online dan lebih terorganisir.
+secara lebih modern, online, dan terorganisir.
 
 ---
 
-# 🎯 Fitur Utama
+# ✨ Fitur Utama
 
-## 🌐 Website Portofolio
+## 🌐 Frontend Website
+
 - Landing page modern
-- About & tech stack
-- Showcase project
-- Contact form dinamis
 - Responsive design
+- Dynamic showcase project
+- Dynamic kategori project
+- About & Tech Stack
+- Detail project page
+- Contact form
+- Social media integration
 
+---
 
+## ⚙️ Dashboard Admin Filament
 
-## 📚 Detail Project Dinamis
-Menampilkan:
-- Judul project
-- Deskripsi singkat
-- Analisis masalah
-- Kebutuhan sistem
-- Tech stack
-- ERD & Flowchart
-- Status progress project
+Admin panel digunakan untuk mengelola:
 
-
-
-## ⚙️ Dashboard Admin (Filament)
-Panel admin digunakan untuk:
 - CRUD Project
 - CRUD Progress Project
 - CRUD Pesan Kontak
-- Update progress project
-- Manajemen data dinamis
-
-
-
-## 📩 Contact Form Integration
-Form kontak terhubung langsung ke database menggunakan Laravel.
-
-Data yang dikirim:
-- Nama
-- Email
-- Subjek
-- Pesan
+- Upload ERD & Flowchart
+- Upload PDF laporan
+- Dynamic Tech Stack
+- Dynamic kategori project
+- Progress monitoring
 
 ---
 
-# 🧠 Konsep & Teknologi
+## 📊 Progress Project System
 
-Project ini menggunakan konsep:
+Menampilkan:
+
+- Persentase progress
+- Status pengerjaan
+- Progress bar dinamis
+- Dashboard chart
+- Timeline pengerjaan project
+
+---
+
+## 📚 Detail Project Dinamis
+
+Setiap project memiliki halaman detail berisi:
+
+- Judul project
+- Deskripsi lengkap
+- Analisis masalah
+- Kebutuhan sistem
+- Tech stack
+- ERD
+- Flowchart
+- Progress project
+- File laporan PDF
+
+---
+
+# 🧠 Konsep yang Digunakan
+
+Project ini menerapkan beberapa konsep pengembangan web modern:
 
 - MVC (Model View Controller)
-- CRUD
-- Database Relational
-- REST/API Concept
-- Admin Panel
+- CRUD System
+- Relational Database
 - Dynamic Content
+- Admin Panel
+- File Upload Management
+- REST Concept
+- Responsive Web Design
 
 ---
 
@@ -110,34 +137,41 @@ Project ini menggunakan konsep:
 
 | Teknologi | Keterangan |
 |---|---|
-| Laravel | Backend Framework |
-| PHP | Bahasa Pemrograman |
+| Laravel 12 | Backend Framework |
+| PHP 8 | Bahasa Pemrograman |
 | Blade | Template Engine |
+| Filament | Admin Panel |
 | Docker | Container Development |
 | MariaDB | Database |
-| Filament | Admin Panel |
+| Nginx | Web Server |
+| Bootstrap | Frontend UI |
 | GitHub | Version Control |
 | VS Code | Code Editor |
 
 ---
 
-# 📂 Struktur Database
+# 🗂️ Struktur Database
 
-Tabel utama:
+Tabel utama yang digunakan:
 
 ```text
 projects
 project_progress
+profiles
 contact_messages
+users
+roles
 ```
+
 ---
 
 # 📊 Diagram Sistem
 
-Project ini juga dilengkapi dengan:
+Project ini dilengkapi dengan dokumentasi diagram sistem:
 ```text
 ✅ Use Case Diagram
-✅ ERD (Entity Relationship Diagram)
+✅ Activity Diagram
+✅ Entity Relationship Diagram (ERD)
 ✅ DFD Level 0
 ✅ DFD Level 1
 ✅ Flowchart Sistem
@@ -145,11 +179,11 @@ Project ini juga dilengkapi dengan:
 
 ---
 
-# 📄 Laporan Project Akhir
+# 📄 Dokumentasi Laporan
 
-Laporan awal project akhir tersedia dalam format PDF di repository ini.
+Repository ini juga menyertakan laporan project akhir dalam format PDF.
 
-Isi laporan:
+Isi laporan meliputi:
 ```text
 BAB I Pendahuluan
 BAB II Studi Teoritis
@@ -160,34 +194,99 @@ BAB V Penutup
 
 ---
 
-# ▶️ Cara Menjalankan Project
-Clone Repository
+# 🖼️ Screenshot Aplikasi
+
+## 🌐 Landing Page
+
+### Home
+![Home 1](public/screenshots/home.png)
+
+### Areas of Expertise
+![Home 2](public/screenshots/home2.png)
+
+### Showcase Project
+![Home 3](public/screenshots/home3.png)
+
+### Profile and Tech Stack
+![Home 4](public/screenshots/home4.png)
+
+### About and social media
+![Home 5](public/screenshots/home5.png)
+
+### Contact Me
+![Home 6](public/screenshots/home6.png)
+
+---
+
+# 📚 Detail Project Page
+
+### Detail Project Header
+![Detail Project 1](public/screenshots/detailproject1.png)
+
+### Analisis Sistem
+![Detail Project 2](public/screenshots/detailproject2.png)
+
+### Tech Stack and Progress Project
+![Detail Project 3](public/screenshots/detailproject3.png)
+
+### Progress Project
+![Detail Project 4](public/screenshots/detailproject4.png)
+
+### ERD
+![Detail Project 5](public/screenshots/detailproject5.png)
+
+### Flowchart
+![Detail Project 6](public/screenshots/detailproject6.png)
+
+### Laporan
+![Detail Project 7](public/screenshots/detailproject7.png)
+
+---
+
+# ⚙️ Dashboard Admin
+
+![Dashboard Admin](public/screenshots/admin.png)
+
+---
+
+# 🚀 Cara Menjalankan Project
+1. Clone Repository
 ```sh
 git clone https://github.com/illhammf/uts-2026.git
 ```
-Masuk ke Folder Project
+2. Masuk ke Folder Project
 ```sh
-cd /root/perkuliahan/uts-2026
+cd uts-2026
 ```
-Jalankan Docker
-```sh
-dcu
-```
-atau:
+3. Jalankan Docker
 ```sh
 docker compose up -d
 ```
-Jalankan Migration & Seeder
+atau menggunakan helper command:
 ```sh
-dca project:init
+dcu
 ```
-atau:
+4. Install Dependency
+```sh
+composer install
+npm install
+```
+5. Konfigurasi Environment
+```sh
+cp .env.example .env
+php artisan key:generate
+```
+6. Jalankan Migration & Seeder
 ```sh
 php artisan migrate:fresh --seed
 ```
-Jika ingin matikan docker
+atau:
 ```sh
-dcd
+dca project:init
+```
+7. Jalankan Development Server
+```sh
+npm run dev
 ```
 
 ## 🔐 Admin Panel
@@ -198,26 +297,33 @@ https://uts.test/admin
 ---
 
 # 👨‍🎓 Informasi Mahasiswa
-
-| Data | Keterangan |
+| Data |	Keterangan |
 |---|---|
-| Nama | Ilham Firmansyah |
+| Nama |	Ilham Firmansyah |
 | NIM |	20240801102 |
-| Program Studi | Teknik Informatika |
-| Fakultas | Ilmu Komputer |
-| Angkatan | 2024 |
-
-**Universitas	Universitas Esa Unggul** 
+| Program | Studi	Teknik Informatika |
+| Fakultas |	Ilmu Komputer |
+| Universitas |	Universitas Esa Unggul |
+| Angkatan |	2024 |
 
 ---
 
 # 📌 Catatan
 
 Project ini dibuat untuk memenuhi tugas:
-- Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Web
-- dan sekaligus menjadi progress awal project akhir berbasis Laravel.
+
+- Ujian Tengah Semester (UTS)
+- Mata Kuliah Pemrograman Web
+- Sekaligus sebagai progress awal project akhir berbasis Laravel
 
 ---
+
+# 📜 License
+
+Project ini menggunakan lisensi MIT.
+
+---
+
 
 # ⭐ Author
 
