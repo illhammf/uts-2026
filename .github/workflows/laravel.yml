@@ -18,7 +18,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, dom, fileinfo, mysql
+          extensions: mbstring, dom, fileinfo, sqlite
           coverage: none
 
       - name: Copy environment file
@@ -32,6 +32,13 @@ jobs:
       - name: Generate application key
         working-directory: src
         run: php artisan key:generate
+
+      - name: Configure SQLite database
+        working-directory: src
+        run: |
+          touch database/database.sqlite
+          echo "DB_CONNECTION=sqlite" >> .env
+          echo "DB_DATABASE=$(pwd)/database/database.sqlite" >> .env
 
       - name: Run database migrations
         working-directory: src
