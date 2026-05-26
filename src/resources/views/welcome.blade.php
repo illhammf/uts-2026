@@ -61,7 +61,7 @@
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700" rel="stylesheet" type="text/css">
 </head>
 
-<body data-spy="scroll" data-target="#rock-navigation">
+<body data-spy="scroll" data-target="#rock-navigation" x-data="{ darkMode: false }" :class="{ 'dark-mode': darkMode }">
 
     <!-- START NAVIGATION -->
     <div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation" role="navigation">
@@ -84,6 +84,15 @@
                     <li><a href="#resume" class="smoothScroll">Profil</a></li>
                     <li><a href="#about" class="smoothScroll">Tentang</a></li>
                     <li><a href="#contact" class="smoothScroll">Kontak</a></li>
+                    <li>
+                        <button
+                            type="button"
+                            @click="darkMode = !darkMode"
+                            class="dark-toggle-btn">
+                            <span x-show="!darkMode">🌙</span>
+                            <span x-show="darkMode">☀️</span>
+                        </button>
+                    </li>
                 </ul>
             </nav>
 
@@ -541,5 +550,7 @@
         });
     });
     </script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>

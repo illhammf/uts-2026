@@ -69,6 +69,63 @@ hr {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus { background-color: transparent }
+
+.dark-toggle-btn {
+    background: #eb5424;
+    color: #ffffff;
+    border: none;
+    padding: 8px 13px;
+    border-radius: 999px;
+    margin-top: 10px;
+}
+
+.dark-mode {
+    background: #0f172a !important;
+    color: #e5e7eb !important;
+}
+
+.dark-mode .navbar,
+.dark-mode .tm-padding-top-bottom-100,
+.dark-mode .tm-portfolio,
+.dark-mode .tm-contact {
+    background: #111827 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-mode .title,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode p {
+    color: #e5e7eb !important;
+}
+
+.dark-mode .work-wrapper,
+.dark-mode .contact-card,
+.dark-mode .contact-form-area {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-mode .form-control {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border-color: #374151 !important;
+}
+/* Navbar text dark mode */
+.dark-mode .navbar-default .navbar-brand,
+.dark-mode .navbar-default .navbar-nav li a {
+    color: #ffffff !important;
+}
+
+/* Hero/Home text tetap hitam */
+.dark-mode #home h1,
+.dark-mode #home h2,
+.dark-mode #home h3,
+.dark-mode #home p {
+    color: #111111 !important;
+}
 /* END NAVIGATION */
 
 /* START HOME */

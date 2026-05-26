@@ -16,6 +16,7 @@
 <img src="https://img.shields.io/badge/Filament-Admin%20Panel-F59E0B?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Docker-Container-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/MariaDB-Database-003545?style=for-the-badge&logo=mariadb&logoColor=white" />
+<img src="https://github.com/illhammf/uts-2026/actions/workflows/laravel.yml/badge.svg" />
 
 </p>
 
