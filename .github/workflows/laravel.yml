@@ -33,6 +33,10 @@ jobs:
         working-directory: src
         run: php artisan key:generate
 
+      - name: Run database migrations
+        working-directory: src
+        run: php artisan migrate --force
+
       - name: Run tests
         working-directory: src
         run: php artisan test
