@@ -1,5 +1,5 @@
 <h1 align="center">
-  💻 UTS Pemrograman Web CR002 <br>
+  UTS Pemrograman Web CR002 <br>
   Portofolio & Progress Project Akhir
 </h1>
 
@@ -197,7 +197,7 @@ BAB V Penutup
 
 # 🖼️ Screenshot Aplikasi
 
-## 🌐 Landing Page
+## Landing Page
 
 ### Home
 ![Home 1](public/screenshots/home.png)
@@ -219,7 +219,7 @@ BAB V Penutup
 
 ---
 
-# 📚 Detail Project Page
+## Detail Project Page
 
 ### Detail Project Header
 ![Detail Project 1](public/screenshots/detailproject1.png)
@@ -294,6 +294,14 @@ npm run dev
 ```sh
 https://uts.test/admin
 ```
+username:
+```sh
+admin@admin@.com
+```
+password:
+```sh
+password
+```
 
 ---
 
@@ -309,22 +317,11 @@ https://uts.test/admin
 
 ---
 
-# 📌 Catatan
-
-Project ini dibuat untuk memenuhi tugas:
-
-- Ujian Tengah Semester (UTS)
-- Mata Kuliah Pemrograman Web
-- Sekaligus sebagai progress awal project akhir berbasis Laravel
-
----
-
 # 📜 License
 
 Project ini menggunakan lisensi MIT.
 
 ---
-
 
 # ⭐ Author
 
