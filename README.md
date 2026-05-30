@@ -30,40 +30,24 @@
 
 ---
 
-# 📖 Tentang Project
+# Tentang Project
 
 Repository ini merupakan project **Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Web** yang dibuat menggunakan framework Laravel 12.
 
 Aplikasi ini berfungsi sebagai:
 
-- 🌐 Website Portofolio Personal
-- 📊 Showcase Progress Project Akhir
-- ⚙️ Dashboard Admin Dinamis
-- 📂 Sistem CRUD Project
-- 📩 Contact Form Integration
-- 📈 Monitoring Progress Project
-
-Project utama yang ditampilkan dalam website ini adalah:
-
-# 🖨️ Tukang Print Dadakan
-
-Sistem layanan print mahasiswa berbasis web yang dirancang untuk membantu proses:
-
-- Print dokumen
-- Print gambar
-- Fotokopi
-- Laminating
-- Jilid tugas
-- Formatting dokumen
-- Konsultasi tugas
-
-secara lebih modern, online, dan terorganisir.
+- Website Portofolio Personal
+- Showcase Progress Project Akhir
+- Dashboard Admin Dinamis
+- Sistem CRUD Project
+- Contact Form Integration
+- Monitoring Progress Project
 
 ---
 
-# ✨ Fitur Utama
+# Fitur Utama
 
-## 🌐 Frontend Website
+## Frontend Website
 
 - Landing page modern
 - Responsive design
@@ -76,7 +60,7 @@ secara lebih modern, online, dan terorganisir.
 
 ---
 
-## ⚙️ Dashboard Admin Filament
+## Dashboard Admin Filament
 
 Admin panel digunakan untuk mengelola:
 
@@ -91,7 +75,7 @@ Admin panel digunakan untuk mengelola:
 
 ---
 
-## 📊 Progress Project System
+## Progress Project System
 
 Menampilkan:
 
@@ -103,7 +87,7 @@ Menampilkan:
 
 ---
 
-## 📚 Detail Project Dinamis
+## Detail Project
 
 Setiap project memiliki halaman detail berisi:
 
@@ -119,7 +103,7 @@ Setiap project memiliki halaman detail berisi:
 
 ---
 
-# 🧠 Konsep yang Digunakan
+# Konsep yang Digunakan
 
 Project ini menerapkan beberapa konsep pengembangan web modern:
 
@@ -134,7 +118,7 @@ Project ini menerapkan beberapa konsep pengembangan web modern:
 
 ---
 
-# 🛠️ Tech Stack
+# Tech Stack
 
 | Teknologi | Keterangan |
 |---|---|
@@ -151,7 +135,7 @@ Project ini menerapkan beberapa konsep pengembangan web modern:
 
 ---
 
-# 🗂️ Struktur Database
+# Struktur Database
 
 Tabel utama yang digunakan:
 
@@ -166,7 +150,7 @@ roles
 
 ---
 
-# 📊 Diagram Sistem
+# Diagram Sistem
 
 Project ini dilengkapi dengan dokumentasi diagram sistem:
 ```text
@@ -180,7 +164,7 @@ Project ini dilengkapi dengan dokumentasi diagram sistem:
 
 ---
 
-# 📄 Dokumentasi Laporan
+# Dokumentasi Laporan
 
 Repository ini juga menyertakan laporan project akhir dalam format PDF.
 
@@ -195,62 +179,50 @@ BAB V Penutup
 
 ---
 
-# 🖼️ Screenshot Aplikasi
+# Screenshot Aplikasi
 
 ## Landing Page
 
 ### Home
 ![Home 1](public/screenshots/home.png)
-
 ### Areas of Expertise
 ![Home 2](public/screenshots/home2.png)
-
 ### Showcase Project
 ![Home 3](public/screenshots/home3.png)
-
 ### Profile and Tech Stack
 ![Home 4](public/screenshots/home4.png)
-
 ### About and social media
 ![Home 5](public/screenshots/home5.png)
-
 ### Contact Me
 ![Home 6](public/screenshots/home6.png)
 
----
 
 ## Detail Project Page
 
 ### Detail Project Header
 ![Detail Project 1](public/screenshots/detailproject1.png)
-
 ### Analisis Sistem
 ![Detail Project 2](public/screenshots/detailproject2.png)
-
 ### Tech Stack and Progress Project
 ![Detail Project 3](public/screenshots/detailproject3.png)
-
 ### Progress Project
 ![Detail Project 4](public/screenshots/detailproject4.png)
-
 ### ERD
 ![Detail Project 5](public/screenshots/detailproject5.png)
-
 ### Flowchart
 ![Detail Project 6](public/screenshots/detailproject6.png)
-
 ### Laporan
 ![Detail Project 7](public/screenshots/detailproject7.png)
 
 ---
 
-# ⚙️ Dashboard Admin
+# Dashboard Admin
 
 ![Dashboard Admin](public/screenshots/admin.png)
 
 ---
 
-# 🚀 Cara Menjalankan Project
+# Cara Menjalankan Project
 1. Clone Repository
 ```sh
 git clone https://github.com/illhammf/uts-2026.git
@@ -290,7 +262,7 @@ dca project:init
 npm run dev
 ```
 
-## 🔐 Admin Panel
+## Admin Panel
 ```sh
 https://uts.test/admin
 ```
@@ -305,7 +277,7 @@ password
 
 ---
 
-# 👨‍🎓 Informasi Mahasiswa
+# Informasi Mahasiswa
 | Data |	Keterangan |
 |---|---|
 | Nama |	Ilham Firmansyah |
@@ -317,15 +289,8 @@ password
 
 ---
 
-# 📜 License
+# License
 
 Project ini menggunakan lisensi MIT.
 
 ---
-
-# ⭐ Author
-
-Made with ❤️ by **Ilham Firmansyah**
-
-🔗 GitHub:
-https://github.com/illhammf
