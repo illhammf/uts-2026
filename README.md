@@ -229,7 +229,7 @@ git clone https://github.com/illhammf/uts-2026.git
 ```
 2. Masuk ke Folder Project
 ```sh
-cd uts-2026
+cd root/perkuliahan/uts-2026
 ```
 3. Jalankan Docker
 ```sh
@@ -273,6 +273,10 @@ admin@admin@.com
 password:
 ```sh
 password
+```
+dan jika ingin mematikannya
+```sh
+dcd
 ```
 
 ---
