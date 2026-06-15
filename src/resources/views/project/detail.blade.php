@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,79 +9,85 @@
     <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('front/css/templatemo-style.css') }}">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700,800" rel="stylesheet">
 
     <style>
         body {
-            background: #f5f7fb;
+            background: #f6f8fc;
             color: #334155;
             font-family: 'Raleway', sans-serif;
         }
 
         .project-hero {
-            min-height: 430px;
+            min-height: 520px;
             background:
-                linear-gradient(135deg, rgba(17, 24, 39, .96), rgba(235, 84, 36, .88)),
+                linear-gradient(135deg, rgba(15, 23, 42, .96), rgba(235, 84, 36, .88)),
                 url('{{ $project->gambar ? asset('storage/' . $project->gambar) : asset('front/images/portfolio-img1.jpg') }}');
             background-size: cover;
             background-position: center;
             color: #ffffff;
             display: flex;
             align-items: center;
-            padding: 90px 0 70px;
+            padding: 110px 0 110px;
             position: relative;
             overflow: hidden;
         }
 
-        .project-hero::after {
+        .project-hero::before {
             content: "";
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            background: rgba(255,255,255,.08);
             position: absolute;
-            right: -70px;
-            top: -70px;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.14), transparent 25%),
+                radial-gradient(circle at 80% 15%, rgba(255,255,255,.10), transparent 22%),
+                radial-gradient(circle at 70% 80%, rgba(255,255,255,.10), transparent 20%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
         .project-badge {
             display: inline-block;
-            padding: 9px 18px;
+            padding: 10px 18px;
             border-radius: 999px;
             background: rgba(255,255,255,.16);
             border: 1px solid rgba(255,255,255,.25);
             color: #ffffff;
             font-size: 13px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 1px;
             margin-bottom: 18px;
             text-transform: uppercase;
         }
 
         .project-hero h1 {
-            font-size: 48px;
+            font-size: 56px;
             font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 18px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .project-hero p {
-            max-width: 760px;
+            max-width: 780px;
             font-size: 18px;
             line-height: 32px;
             color: #f8fafc;
         }
 
         .hero-actions {
-            margin-top: 28px;
+            margin-top: 30px;
         }
 
         .btn-back,
         .btn-report {
             display: inline-block;
-            padding: 13px 22px;
-            border-radius: 12px;
+            padding: 14px 24px;
+            border-radius: 14px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 800;
             margin-right: 10px;
             transition: .25s;
         }
@@ -98,48 +105,53 @@
 
         .btn-back:hover,
         .btn-report:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             text-decoration: none;
             color: #ffffff;
             background: #eb5424;
         }
 
         .content-section {
-            padding: 60px 0;
+            padding: 0 0 70px;
         }
 
         .summary-grid {
-            margin-top: -105px;
+            margin-top: -80px;
             position: relative;
-            z-index: 3;
+            z-index: 4;
         }
 
         .summary-card {
             background: #ffffff;
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 18px 40px rgba(15, 23, 42, .10);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, .12);
             border: 1px solid #eef2f7;
-            min-height: 130px;
-            margin-bottom: 25px;
+            min-height: 150px;
+            margin-bottom: 26px;
+            transition: .25s;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-6px);
         }
 
         .summary-card i {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
+            width: 54px;
+            height: 54px;
+            border-radius: 16px;
             background: #fff1eb;
             color: #eb5424;
             text-align: center;
-            line-height: 48px;
-            font-size: 22px;
+            line-height: 54px;
+            font-size: 24px;
             margin-bottom: 14px;
         }
 
         .summary-card h4 {
             font-weight: 800;
             color: #111827;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .summary-card p {
@@ -150,26 +162,26 @@
 
         .project-card {
             background: #ffffff;
-            border-radius: 20px;
-            padding: 34px;
-            margin-bottom: 28px;
+            border-radius: 24px;
+            padding: 38px;
+            margin-bottom: 30px;
             box-shadow: 0 14px 35px rgba(15, 23, 42, .07);
             border: 1px solid #eef2f7;
         }
 
         .project-card h3 {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             font-weight: 800;
             color: #111827;
             position: relative;
-            padding-left: 16px;
+            padding-left: 18px;
         }
 
         .project-card h3::before {
             content: "";
-            width: 5px;
-            height: 28px;
-            background: #eb5424;
+            width: 6px;
+            height: 30px;
+            background: linear-gradient(135deg, #eb5424, #ff7b29);
             border-radius: 999px;
             position: absolute;
             left: 0;
@@ -182,21 +194,28 @@
             font-size: 16px;
         }
 
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
         .tech-pill {
             display: inline-block;
             background: #fff1eb;
             color: #eb5424;
-            padding: 8px 14px;
+            padding: 9px 15px;
             border-radius: 999px;
             margin: 5px 5px 5px 0;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 13px;
+            border: 1px solid #fed7c3;
         }
 
         .progress-item {
             background: #f8fafc;
-            border-radius: 16px;
-            padding: 20px;
+            border-radius: 18px;
+            padding: 22px;
             margin-bottom: 18px;
             border: 1px solid #e5e7eb;
         }
@@ -214,7 +233,7 @@
         }
 
         .progress {
-            height: 18px;
+            height: 20px;
             border-radius: 999px;
             background: #e5e7eb;
             box-shadow: none;
@@ -226,14 +245,14 @@
             background: linear-gradient(135deg, #eb5424, #ff7b29);
             border-radius: 999px;
             font-size: 11px;
-            font-weight: 700;
-            line-height: 18px;
+            font-weight: 800;
+            line-height: 20px;
         }
 
         .diagram-img {
             width: 100%;
-            border-radius: 16px;
-            margin-top: 15px;
+            border-radius: 18px;
+            margin-top: 16px;
             box-shadow: 0 12px 30px rgba(15, 23, 42, .12);
             border: 1px solid #e5e7eb;
             background: #ffffff;
@@ -254,20 +273,20 @@
             gap: 20px;
             flex-wrap: wrap;
             background: linear-gradient(135deg, #fff1eb, #ffffff);
-            border-radius: 18px;
-            padding: 24px;
+            border-radius: 20px;
+            padding: 26px;
             border: 1px solid #fed7c3;
-        }
-
-        .report-box i {
-            font-size: 44px;
-            color: #eb5424;
-            margin-right: 15px;
         }
 
         .report-info {
             display: flex;
             align-items: center;
+        }
+
+        .report-info i {
+            font-size: 46px;
+            color: #eb5424;
+            margin-right: 18px;
         }
 
         .report-info h4 {
@@ -284,8 +303,8 @@
         .btn-download {
             background: #eb5424;
             color: #ffffff;
-            padding: 13px 22px;
-            border-radius: 12px;
+            padding: 14px 24px;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 800;
             transition: .25s;
@@ -295,16 +314,21 @@
             background: #111827;
             color: #ffffff;
             text-decoration: none;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         .footer-detail {
-            padding: 30px 0 50px;
+            padding: 35px 0 50px;
             text-align: center;
             color: #64748b;
         }
 
         @media (max-width: 768px) {
+            .project-hero {
+                min-height: 430px;
+                padding: 90px 0;
+            }
+
             .project-hero h1 {
                 font-size: 34px;
             }
@@ -318,203 +342,205 @@
             }
 
             .summary-grid {
-                margin-top: -60px;
+                margin-top: -50px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-back,
+            .btn-report {
+                margin-bottom: 10px;
             }
         }
     </style>
 </head>
+
 <body>
 
-<section class="project-hero">
-    <div class="container">
-        <span class="project-badge">
-            {{ strtoupper($project->status_project) }}
-        </span>
+    <section class="project-hero">
+        <div class="container hero-content">
+            <span class="project-badge">
+                {{ strtoupper($project->status_project) }}
+            </span>
 
-        <h1>{{ $project->judul }}</h1>
+            <h1>{{ $project->judul }}</h1>
 
-        <p>{{ $project->deskripsi_singkat }}</p>
+            <p>{{ $project->deskripsi_singkat }}</p>
 
-        <div class="hero-actions">
-            <a href="{{ url('/') }}" class="btn-back">
-                <i class="fa fa-arrow-left"></i>
-                Kembali ke Portfolio
-            </a>
-
-            @if($project->file_laporan)
-                <a href="{{ asset('storage/' . $project->file_laporan) }}" target="_blank" class="btn-report">
-                    <i class="fa fa-file-pdf-o"></i>
-                    Lihat Laporan
+            <div class="hero-actions">
+                <a href="{{ url('/') }}" class="btn-back">
+                    <i class="fa fa-arrow-left"></i>
+                    Kembali ke Portfolio
                 </a>
-            @endif
-        </div>
-    </div>
-</section>
 
-<section class="content-section">
-    <div class="container">
-
-        <div class="row summary-grid">
-            <div class="col-md-4 col-sm-4">
-                <div class="summary-card">
-                    <i class="fa fa-folder-open"></i>
-                    <h4>Status Project</h4>
-                    <p>{{ ucfirst($project->status_project) }}</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4">
-                <div class="summary-card">
-                    <i class="fa fa-line-chart"></i>
-                    <h4>Total Progress</h4>
-                    <p>{{ $project->progresses->count() }} tahapan progress tercatat</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4">
-                <div class="summary-card">
-                    <i class="fa fa-code"></i>
-                    <h4>Tech Stack</h4>
-                    <p>{{ $project->tech_stack ?: 'Belum tersedia' }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>Analisis Masalah</h3>
-
-            @if($project->analisis_masalah)
-                <p>{{ $project->analisis_masalah }}</p>
-            @else
-                <p class="empty-text">Analisis masalah belum ditambahkan.</p>
-            @endif
-        </div>
-
-        <div class="project-card">
-            <h3>Kebutuhan Sistem</h3>
-
-            @if($project->kebutuhan_sistem)
-                <p>{{ $project->kebutuhan_sistem }}</p>
-            @else
-                <p class="empty-text">Kebutuhan sistem belum ditambahkan.</p>
-            @endif
-        </div>
-
-        <div class="project-card">
-            <h3>Arsitektur Sistem</h3>
-
-            @if($project->arsitektur)
-                <p>{{ $project->arsitektur }}</p>
-            @else
-                <p class="empty-text">Arsitektur sistem belum ditambahkan.</p>
-            @endif
-        </div>
-
-        <div class="project-card">
-            <h3>Tech Stack</h3>
-
-            @if($project->tech_stack)
-                @foreach(explode(',', $project->tech_stack) as $stack)
-                    <span class="tech-pill">{{ trim($stack) }}</span>
-                @endforeach
-            @else
-                <p class="empty-text">Tech stack belum ditambahkan.</p>
-            @endif
-        </div>
-
-        <div class="project-card">
-            <h3>Progress Project</h3>
-
-            @forelse ($project->progresses as $progress)
-                <div class="progress-item">
-                    <h4>
-                        {{ $progress->judul_progress }}
-                        <span class="progress-percent">{{ $progress->persentase }}%</span>
-                    </h4>
-
-                    <p>{{ $progress->deskripsi_progress }}</p>
-
-                    <div class="progress">
-                        <div class="progress-bar"
-                            role="progressbar"
-                            style="width: {{ $progress->persentase }}%;">
-                            {{ $progress->status }}
-                        </div>
-                    </div>
-                </div>
-            @empty
-                <p class="empty-text">Belum ada progress project.</p>
-            @endforelse
-        </div>
-
-        @if($project->gambar_erd)
-            <div class="project-card">
-                <h3>Entity Relationship Diagram (ERD)</h3>
-
-                <p>
-                    Diagram ERD digunakan untuk menggambarkan struktur data, entitas,
-                    atribut, serta relasi antar tabel dalam sistem.
-                </p>
-
-                <img
-                    src="{{ asset('storage/' . $project->gambar_erd) }}"
-                    class="diagram-img"
-                    alt="ERD">
-            </div>
-        @endif
-
-        @if($project->gambar_flowchart)
-            <div class="project-card">
-                <h3>Flowchart Sistem</h3>
-
-                <p>
-                    Flowchart digunakan untuk menjelaskan alur kerja sistem dari awal proses
-                    hingga menghasilkan output yang dibutuhkan pengguna.
-                </p>
-
-                <img
-                    src="{{ asset('storage/' . $project->gambar_flowchart) }}"
-                    class="diagram-img"
-                    alt="Flowchart">
-            </div>
-        @endif
-
-        @if($project->file_laporan)
-            <div class="project-card">
-                <h3>Laporan Project</h3>
-
-                <div class="report-box">
-                    <div class="report-info">
+                @if ($project->file_laporan)
+                    <a href="{{ asset('storage/' . $project->file_laporan) }}" target="_blank" class="btn-report">
                         <i class="fa fa-file-pdf-o"></i>
-                        <div>
-                            <h4>Dokumen Laporan Awal Project Akhir</h4>
-                            <p>
-                                File laporan dapat dibuka atau diunduh sebagai bukti dokumentasi project.
-                            </p>
-                        </div>
-                    </div>
-
-                    <a
-                        href="{{ asset('storage/' . $project->file_laporan) }}"
-                        target="_blank"
-                        class="btn-download">
-                        <i class="fa fa-download"></i>
-                        Download PDF
+                        Lihat Laporan
                     </a>
+                @endif
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+
+            <div class="row summary-grid">
+                <div class="col-md-4 col-sm-4">
+                    <div class="summary-card">
+                        <i class="fa fa-folder-open"></i>
+                        <h4>Status Project</h4>
+                        <p>{{ ucfirst($project->status_project) }}</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="summary-card">
+                        <i class="fa fa-line-chart"></i>
+                        <h4>Total Progress</h4>
+                        <p>{{ $project->progresses->count() }} tahapan progress tercatat</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="summary-card">
+                        <i class="fa fa-code"></i>
+                        <h4>Tech Stack</h4>
+                        <p>{{ $project->tech_stack ?: 'Belum tersedia' }}</p>
+                    </div>
                 </div>
             </div>
-        @endif
 
-    </div>
-</section>
+            <div class="two-column">
+                <div class="project-card">
+                    <h3>Analisis Masalah</h3>
 
-<div class="footer-detail">
-    <div class="container">
-        <p>
-            &copy; 2026 Detail Project - 20240801102 Ilham Firmansyah
-        </p>
+                    @if ($project->analisis_masalah)
+                        <p>{{ $project->analisis_masalah }}</p>
+                    @else
+                        <p class="empty-text">Analisis masalah belum ditambahkan.</p>
+                    @endif
+                </div>
+
+                <div class="project-card">
+                    <h3>Kebutuhan Sistem</h3>
+
+                    @if ($project->kebutuhan_sistem)
+                        <p>{{ $project->kebutuhan_sistem }}</p>
+                    @else
+                        <p class="empty-text">Kebutuhan sistem belum ditambahkan.</p>
+                    @endif
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Arsitektur Sistem</h3>
+
+                @if ($project->arsitektur)
+                    <p>{{ $project->arsitektur }}</p>
+                @else
+                    <p class="empty-text">Arsitektur sistem belum ditambahkan.</p>
+                @endif
+            </div>
+
+            <div class="project-card">
+                <h3>Tech Stack</h3>
+
+                @if ($project->tech_stack)
+                    @foreach (explode(',', $project->tech_stack) as $stack)
+                        <span class="tech-pill">{{ trim($stack) }}</span>
+                    @endforeach
+                @else
+                    <p class="empty-text">Tech stack belum ditambahkan.</p>
+                @endif
+            </div>
+
+            <div class="project-card">
+                <h3>Progress Project</h3>
+
+                @forelse ($project->progresses as $progress)
+                    <div class="progress-item">
+                        <h4>
+                            {{ $progress->judul_progress }}
+                            <span class="progress-percent">{{ $progress->persentase }}%</span>
+                        </h4>
+
+                        <p>{{ $progress->deskripsi_progress }}</p>
+
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: {{ $progress->persentase }}%;">
+                                {{ $progress->status }}
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <p class="empty-text">Belum ada progress project.</p>
+                @endforelse
+            </div>
+
+            @if ($project->gambar_erd)
+                <div class="project-card">
+                    <h3>Entity Relationship Diagram (ERD)</h3>
+
+                    <p>
+                        Diagram ERD digunakan untuk menggambarkan struktur data, entitas,
+                        atribut, serta relasi antar tabel dalam sistem.
+                    </p>
+
+                    <img src="{{ asset('storage/' . $project->gambar_erd) }}" class="diagram-img" alt="ERD">
+                </div>
+            @endif
+
+            @if ($project->gambar_flowchart)
+                <div class="project-card">
+                    <h3>Flowchart Sistem</h3>
+
+                    <p>
+                        Flowchart digunakan untuk menjelaskan alur kerja sistem dari awal proses
+                        hingga menghasilkan output yang dibutuhkan pengguna.
+                    </p>
+
+                    <img src="{{ asset('storage/' . $project->gambar_flowchart) }}" class="diagram-img" alt="Flowchart">
+                </div>
+            @endif
+
+            @if ($project->file_laporan)
+                <div class="project-card">
+                    <h3>Laporan Project</h3>
+
+                    <div class="report-box">
+                        <div class="report-info">
+                            <i class="fa fa-file-pdf-o"></i>
+                            <div>
+                                <h4>Dokumen Laporan Awal Project Akhir</h4>
+                                <p>
+                                    File laporan dapat dibuka atau diunduh sebagai bukti dokumentasi project.
+                                </p>
+                            </div>
+                        </div>
+
+                        <a href="{{ asset('storage/' . $project->file_laporan) }}" target="_blank" class="btn-download">
+                            <i class="fa fa-download"></i>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            @endif
+
+        </div>
+    </section>
+
+    <div class="footer-detail">
+        <div class="container">
+            <p>
+                &copy; 2026 Detail Project - 20240801102 Ilham Firmansyah
+            </p>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
