@@ -49,10 +49,10 @@ Aplikasi ini berfungsi sebagai:
 
 ## Frontend Website
 
-- Landing page modern
+- Landing page
 - Responsive design
-- Dynamic showcase project
-- Dynamic kategori project
+- Showcase project
+- Kategori project
 - About & Tech Stack
 - Detail project page
 - Contact form
