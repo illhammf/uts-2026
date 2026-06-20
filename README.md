@@ -175,6 +175,7 @@ BAB II Studi Teoritis
 BAB III Metodologi Penelitian
 BAB IV Hasil dan Pembahasan
 BAB V Penutup
+Daftar Pustaka
 ```
 
 ---
