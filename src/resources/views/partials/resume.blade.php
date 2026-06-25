@@ -58,7 +58,7 @@
             <div class="col-md-6 col-sm-6">
                 <h2 class="title"><strong>Tech</strong> Stack</h2>
                 <p>
-                    Beberapa teknologi yang sedang saya pelajari dan gunakan dalam pengembangan project
+                    Beberapa teknologi atau skill yang sedang saya pelajari dan gunakan dalam pengembangan project
                     Pemrograman Web.
                 </p>
 
