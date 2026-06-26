@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@
             top: -120px;
             width: 350px;
             height: 350px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 50%;
         }
 
@@ -50,7 +51,7 @@
 
         .badge-custom {
             display: inline-block;
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.15);
             color: #fff;
             padding: 9px 16px;
             border-radius: 30px;
@@ -164,150 +165,153 @@
 
 <body>
 
-<section class="hero">
-    <div class="container">
-        <span class="badge-custom">UTS Pemrograman Web</span>
-        <span class="badge-custom">Portfolio Website</span>
-        <span class="badge-custom">Laravel Blade</span>
-        <span class="badge-custom">Dynamic Contact</span>
+    <section class="hero">
+        <div class="container">
+            <span class="badge-custom">UTS Pemrograman Web</span>
+            <span class="badge-custom">Portfolio Website</span>
+            <span class="badge-custom">Laravel Blade</span>
+            <span class="badge-custom">Dynamic Contact</span>
 
-        <h1>Website Portofolio</h1>
+            <h1>Website Portofolio</h1>
 
-        <p>
-            Website Portofolio adalah halaman personal yang dibuat untuk menampilkan profil,
-            stack keahlian, showcase project, detail laporan awal project akhir, dan form kontak
-            dinamis yang terhubung ke database.
-        </p>
-
-        <a href="{{ url('/') }}" class="btn-back">
-            <i class="fa fa-arrow-left"></i> Kembali ke Portofolio
-        </a>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card-box">
-                    <h3><span>01.</span> Deskripsi Project</h3>
-                    <p>
-                        Website ini dibuat sebagai media portofolio personal Ilham Firmansyah
-                        sekaligus sebagai tempat menampilkan progress project akhir
-                        <strong>Tukang Print Dadakan</strong>.
-                    </p>
-                    <p>
-                        Website ini mendukung kebutuhan UTS Pemrograman Web karena memiliki
-                        halaman Home/About, Showcase Project, Contact dinamis, serta halaman detail
-                        project yang menampilkan laporan awal dan rancangan sistem.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="status-box">
-                    <h3>Status Progress</h3>
-                    <p>
-                        Website portofolio sudah memiliki landing page, showcase project,
-                        halaman detail project, contact form, dan dashboard admin.
-                    </p>
-                    <strong>Progress: 90%</strong>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-box">
-            <h3><span>02.</span> Tujuan Website</h3>
-            <ul>
-                <li>Menampilkan identitas profesional sebagai mahasiswa dan web developer.</li>
-                <li>Menampilkan daftar project yang pernah atau sedang dibuat.</li>
-                <li>Menyediakan halaman detail laporan awal project akhir.</li>
-                <li>Menyediakan form kontak yang datanya tersimpan ke database.</li>
-                <li>Mendukung penilaian UTS Pemrograman Web berbasis Laravel.</li>
-            </ul>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="fa fa-home"></i>
-                    <h4>Home / About</h4>
-                    <p>Berisi profil singkat, bio, dan stack keahlian sebagai web developer.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="fa fa-folder-open"></i>
-                    <h4>Showcase Project</h4>
-                    <p>Menampilkan daftar project seperti Tukang Print Dadakan dan Website Portofolio.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="feature-card">
-                    <i class="fa fa-envelope"></i>
-                    <h4>Contact Dinamis</h4>
-                    <p>Form kontak dapat menyimpan nama, email, subjek, dan pesan ke database.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card-box">
-            <h3><span>03.</span> Arsitektur & Tech Stack</h3>
             <p>
-                Website ini dikembangkan menggunakan Laravel dengan konsep MVC.
-                Tampilan dibuat menggunakan Blade Template, sedangkan data project,
-                progress project, dan pesan kontak dikelola melalui dashboard admin Filament.
+                Website Portofolio adalah halaman personal yang dibuat untuk menampilkan profil,
+                stack keahlian, showcase project, detail laporan awal project akhir, dan form kontak
+                dinamis yang terhubung ke database.
             </p>
 
-            <div class="tech-stack">
-                <span>Laravel</span>
-                <span>PHP</span>
-                <span>Blade Template</span>
-                <span>Bootstrap</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Docker</span>
-                <span>MariaDB</span>
-                <span>Filament Admin</span>
-                <span>GitHub</span>
+            <a href="{{ url('/') }}" class="btn-back">
+                <i class="fa fa-arrow-left"></i> Kembali ke Portofolio
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card-box">
+                        <h3><span>01.</span> Deskripsi Project</h3>
+                        <p>
+                            Website ini dibuat sebagai media portofolio personal Ilham Firmansyah
+                            sekaligus sebagai tempat menampilkan progress project akhir
+                            <strong>Tukang Print Dadakan</strong>.
+                        </p>
+                        <p>
+                            Website ini mendukung kebutuhan UTS Pemrograman Web karena memiliki
+                            halaman Home/About, Showcase Project, Contact dinamis, serta halaman detail
+                            project yang menampilkan laporan awal dan rancangan sistem.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="status-box">
+                        <h3>Status Progress</h3>
+                        <p>
+                            Website portofolio sudah memiliki landing page, showcase project,
+                            halaman detail project, contact form, dan dashboard admin.
+                        </p>
+                        <strong>Progress: 90%</strong>
+                    </div>
+                </div>
             </div>
+
+            <div class="card-box">
+                <h3><span>02.</span> Tujuan Website</h3>
+                <ul>
+                    <li>Menampilkan identitas profesional sebagai mahasiswa dan web developer.</li>
+                    <li>Menampilkan daftar project yang pernah atau sedang dibuat.</li>
+                    <li>Menyediakan halaman detail laporan awal project akhir.</li>
+                    <li>Menyediakan form kontak yang datanya tersimpan ke database.</li>
+                    <li>Mendukung penilaian UTS Pemrograman Web berbasis Laravel.</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fa fa-home"></i>
+                        <h4>Home / About</h4>
+                        <p>Berisi profil singkat, bio, dan stack keahlian sebagai web developer.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fa fa-folder-open"></i>
+                        <h4>Showcase Project</h4>
+                        <p>Menampilkan daftar project seperti Tukang Print Dadakan dan Website Portofolio.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fa fa-envelope"></i>
+                        <h4>Contact Dinamis</h4>
+                        <p>Form kontak dapat menyimpan nama, email, subjek, dan pesan ke database.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-box">
+                <h3><span>03.</span> Arsitektur & Tech Stack</h3>
+                <p>
+                    Website ini dikembangkan menggunakan Laravel dengan konsep MVC.
+                    Tampilan dibuat menggunakan Blade Template, sedangkan data project,
+                    progress project, dan pesan kontak dikelola melalui dashboard admin Filament.
+                </p>
+
+                <div class="tech-stack">
+                    <span>Laravel</span>
+                    <span>PHP</span>
+                    <span>Blade Template</span>
+                    <span>Bootstrap</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Docker</span>
+                    <span>MariaDB</span>
+                    <span>Filament Admin</span>
+                    <span>GitHub</span>
+                </div>
+            </div>
+
+            <div class="card-box">
+                <h3><span>04.</span> Implementasi Dinamis</h3>
+                <ul>
+                    <li><strong>Project:</strong> data project dapat dikelola melalui admin panel.</li>
+                    <li><strong>Project Progress:</strong> progress laporan project akhir dapat diperbarui secara
+                        dinamis.</li>
+                    <li><strong>Contact Message:</strong> pesan dari form kontak masuk ke database.</li>
+                    <li><strong>Admin Panel:</strong> menggunakan Filament untuk CRUD data.</li>
+                </ul>
+            </div>
+
+            <div class="card-box">
+                <h3><span>05.</span> Kesesuaian dengan Soal UTS</h3>
+                <ul>
+                    <li>Memiliki halaman Home/About.</li>
+                    <li>Memiliki halaman Showcase/Project.</li>
+                    <li>Memiliki Contact Form dinamis.</li>
+                    <li>Memiliki detail laporan awal project akhir.</li>
+                    <li>Menggunakan Laravel sebagai modern framework berbasis MVC.</li>
+                    <li>Memiliki CRUD melalui dashboard admin Filament.</li>
+                    <li>Source code dipush ke GitHub.</li>
+                </ul>
+            </div>
+
         </div>
+    </section>
 
-        <div class="card-box">
-            <h3><span>04.</span> Implementasi Dinamis</h3>
-            <ul>
-                <li><strong>Project:</strong> data project dapat dikelola melalui admin panel.</li>
-                <li><strong>Project Progress:</strong> progress laporan project akhir dapat diperbarui secara dinamis.</li>
-                <li><strong>Contact Message:</strong> pesan dari form kontak masuk ke database.</li>
-                <li><strong>Admin Panel:</strong> menggunakan Filament untuk CRUD data.</li>
-            </ul>
-        </div>
-
-        <div class="card-box">
-            <h3><span>05.</span> Kesesuaian dengan Soal UTS</h3>
-            <ul>
-                <li>Memiliki halaman Home/About.</li>
-                <li>Memiliki halaman Showcase/Project.</li>
-                <li>Memiliki Contact Form dinamis.</li>
-                <li>Memiliki detail laporan awal project akhir.</li>
-                <li>Menggunakan Laravel sebagai modern framework berbasis MVC.</li>
-                <li>Memiliki CRUD melalui dashboard admin Filament.</li>
-                <li>Source code dipush ke GitHub.</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-<footer class="footer-project">
-    <p>
-        Project oleh: <br> <strong> 20240801102 Ilham Firmansyah</strong> · Teknik Informatika <br> Universitas Esa Unggul
-    </p>
-    <a href="{{ url('/') }}">Kembali ke halaman utama</a>
-</footer>
+    <footer class="footer-project">
+        <p>
+            Project oleh: <br> <strong> 20240801102 Ilham Firmansyah</strong> · Teknik Informatika <br> Universitas Esa
+            Unggul
+        </p>
+        <a href="{{ url('/') }}">Kembali ke halaman utama</a>
+    </footer>
 
 </body>
+
 </html>
