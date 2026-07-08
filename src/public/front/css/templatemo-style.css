@@ -645,3 +645,219 @@ hr {
     border: 1px solid #e5e7eb;
     margin-top: 15px;
 }
+
+/* ====== RESPONSIVE: TABLET (max 991px) ====== */
+@media screen and (max-width: 991px) {
+    .title {
+        font-size: 36px;
+    }
+    .tm-padding-top-bottom-100 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .work-wrapper {
+        padding: 40px 24px;
+    }
+    .work-wrapper .fa {
+        font-size: 44px;
+        padding-bottom: 24px;
+    }
+    .media {
+        padding: 40px 20px;
+    }
+    .github, .instagram, .whatsapp {
+        min-height: 180px;
+    }
+}
+
+/* ====== RESPONSIVE: MOBILE (max 767px) ====== */
+@media screen and (max-width: 767px) {
+    .templatemo-home {
+        min-height: 100vh;
+        height: auto;
+        padding: 100px 0 80px;
+        background-attachment: scroll;
+    }
+    .tm-home-title {
+        font-size: 32px;
+    }
+    .tm-home-subtitle {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+    .tm-view-more-btn {
+        font-size: 16px;
+        padding: 12px 30px;
+        margin-top: 20px;
+    }
+    .title {
+        font-size: 28px;
+        padding-bottom: 24px;
+    }
+    .tm-padding-top-bottom-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .work-wrapper {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+    .work-wrapper .fa {
+        font-size: 36px;
+        padding-bottom: 16px;
+    }
+    .tm-portfolio {
+        padding-top: 50px;
+    }
+    .portfolio-overlay {
+        padding: 0 16px;
+    }
+    .portfolio-overlay h3 {
+        font-size: 16px;
+    }
+    .portfolio-overlay p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .filter-wrapper li a {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .iso-box {
+        margin-bottom: 12px;
+    }
+    .tm-about {
+        background-attachment: scroll;
+    }
+    .tm-about .col-md-offset-6 {
+        margin-left: 0;
+    }
+    .tm-about .col-md-6,
+    .tm-about .col-sm-7 {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .tm-about .title h2 {
+        font-size: 22px;
+    }
+    .media {
+        padding: 30px 16px;
+    }
+    .github, .instagram, .whatsapp {
+        min-height: auto;
+    }
+    .tm-social .media .fa {
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        font-size: 22px;
+        margin-right: 14px;
+    }
+    .tm-social-title {
+        font-size: 14px;
+    }
+    .media-body h3 {
+        font-size: 20px;
+    }
+    .contact-info {
+        padding: 30px 20px;
+    }
+    .contact-form-area {
+        padding: 30px 20px;
+    }
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .contact-icon i {
+        font-size: 26px;
+    }
+    .contact-info h3 {
+        font-size: 24px;
+    }
+    .contact-detail i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .contact-form-area .form-control {
+        height: 48px;
+        font-size: 14px;
+    }
+    .contact-form-area textarea.form-control {
+        height: 140px;
+    }
+    .navbar-default .navbar-brand {
+        font-size: 24px;
+    }
+    .progress-percent-small {
+        padding-right: 0;
+        float: none;
+        display: inline;
+    }
+}
+
+/* ====== RESPONSIVE: SMALL MOBILE (max 480px) ====== */
+@media screen and (max-width: 480px) {
+    .tm-home-title {
+        font-size: 26px;
+    }
+    .tm-home-subtitle {
+        font-size: 16px;
+    }
+    .tm-view-more-btn {
+        font-size: 14px;
+        padding: 10px 24px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .tm-padding-top-bottom-100 {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+    .work-wrapper {
+        padding: 24px 16px;
+    }
+    .work-wrapper .fa {
+        font-size: 30px;
+        padding-bottom: 12px;
+    }
+    .work-wrapper h3 {
+        font-size: 16px;
+    }
+    .work-wrapper p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .navbar-default .navbar-brand {
+        font-size: 20px;
+        line-height: 36px;
+        padding: 8px 0 0 10px;
+    }
+    .contact-info {
+        padding: 24px 16px;
+    }
+    .contact-form-area {
+        padding: 24px 16px;
+    }
+    .contact-info h3 {
+        font-size: 20px;
+    }
+    .media {
+        padding: 24px 12px;
+    }
+    .portfolio-overlay p {
+        display: none;
+    }
+    .portfolio-overlay h3 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    .portfolio-overlay .btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

@@ -353,6 +353,180 @@
             .btn-report {
                 margin-bottom: 10px;
             }
+
+            .summary-card {
+                padding: 22px;
+                min-height: auto;
+            }
+
+            .project-card h3 {
+                font-size: 20px;
+            }
+
+            .report-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn-download {
+                width: 100%;
+                text-align: center;
+            }
+
+            .progress-percent {
+                float: none;
+                display: block;
+                margin-top: 4px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .project-hero {
+                min-height: 360px;
+                padding: 70px 0 60px;
+            }
+
+            .project-hero h1 {
+                font-size: 26px;
+            }
+
+            .project-hero p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .project-badge {
+                font-size: 11px;
+                padding: 8px 14px;
+            }
+
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-back,
+            .btn-report {
+                text-align: center;
+                margin-right: 0;
+            }
+
+            .summary-grid {
+                margin-top: -30px;
+            }
+
+            .summary-card {
+                padding: 18px;
+                margin-bottom: 16px;
+            }
+
+            .summary-card i {
+                width: 44px;
+                height: 44px;
+                line-height: 44px;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .summary-card h4 {
+                font-size: 15px;
+            }
+
+            .summary-card p {
+                font-size: 13px;
+            }
+
+            .project-card {
+                padding: 18px;
+                margin-bottom: 20px;
+            }
+
+            .project-card h3 {
+                font-size: 18px;
+                padding-left: 14px;
+            }
+
+            .project-card h3::before {
+                height: 24px;
+            }
+
+            .project-card p {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .two-column {
+                gap: 16px;
+            }
+
+            .tech-pill {
+                font-size: 11px;
+                padding: 6px 12px;
+            }
+
+            .progress-item {
+                padding: 16px;
+            }
+
+            .progress-item h4 {
+                font-size: 15px;
+            }
+
+            .progress {
+                height: 16px;
+            }
+
+            .progress-bar {
+                font-size: 10px;
+                line-height: 16px;
+            }
+
+            .report-box {
+                padding: 18px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .report-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .report-info i {
+                font-size: 36px;
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+
+            .report-info h4 {
+                font-size: 16px;
+            }
+
+            .report-info p {
+                font-size: 13px;
+            }
+
+            .btn-download {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .diagram-img {
+                border-radius: 12px;
+            }
+
+            .footer-detail {
+                padding: 24px 0 36px;
+                font-size: 13px;
+            }
+
+            .empty-text {
+                font-size: 14px;
+                padding: 14px;
+            }
         }
     </style>
 </head>

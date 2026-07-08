@@ -7,13 +7,13 @@
                 <h2 class="title">Profil <strong>Saya</strong></h2>
 
                 @if ($profile?->foto)
-                    <div style="margin-bottom: 25px;">
-                        <img
-                            src="{{ asset('storage/' . $profile->foto) }}"
-                            alt="{{ $nama }}"
-                            class="img-responsive"
-                            style="width: 170px; height: 170px; object-fit: cover; border-radius: 50%; border: 5px solid #eb5424;">
-                    </div>
+                <div style="margin-bottom: 25px; max-width: 170px;">
+                    <img
+                        src="{{ asset('storage/' . $profile->foto) }}"
+                        alt="{{ $nama }}"
+                        class="img-responsive"
+                        style="width: 100%; max-width: 170px; height: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: 50%; border: 5px solid #eb5424;">
+                </div>
                 @endif
 
                 <p>
